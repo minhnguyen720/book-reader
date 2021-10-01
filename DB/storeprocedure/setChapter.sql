@@ -16,10 +16,11 @@ BEGIN
 		DO
 			SET ChapterID = concat('C',floor(rand()*100000));
 		END WHILE;
-        
-	IF BookName IN (SELECT B.BookName FROM book B) 
+    IF replace(book_name_temp,' ','') !='' AND replace(chapter_name_temp,' ','') !=''
+	THEN IF BookName IN (SELECT B.BookName FROM book B) 
 		THEN INSERT INTO chapter VALUES (ChapterID,(SELECT B.BookID FROM book B WHERE B.BookName=BookName),ChapterName,ChapterPosition);
         SET flag=1;
 		END IF;
+	END IF;
     SELECT flag;
 END
