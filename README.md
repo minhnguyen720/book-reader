@@ -1,22 +1,46 @@
 # book-reader
-<h1>1. getChapter</h1>
+<h2>1. getChapter</h2>
 <p>
 /getChapters?title="
-. input: book tittle
-. procedure name: 
-. output: all chapters of that book
 </p>
+<ul>
+  <li>
+    input: book tittle
+  </li>
+    <li>
+    output: all chapters of that book
+  </li>
+    <li>
+    procedure name: 
+  </li>
+</ul>
 <h1>2. getBook</h1>
 <p>
 /getBook?tittle="
-. input: get xml file appropriate  to the book
-. procedure name: 
-. output: book match the name 
 </p>
+<ul>
+  <li>
+    input: get xml file appropriate  to the book
+  </li>
+    <li>
+    output: book match the name
+  </li>
+    <li>
+    procedure name: 
+  </li>
+</ul>
 <h1>3. setBook</h1>
 <p>
 /setBook?title="&id="
-. input: the title and id of the book
-. procedure name: 
-. output: the title, id and the path to storage keep the file
+<ul>
+  <li>
+    input: the title and id of the book
+  </li>
+    <li>
+    output: the title, id and the path to storage keep the file
+  </li>
+    <li>
+    procedure name: 
+  </li>
+</ul>
 </p>
