@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f8e140eb31.js" crossorigin="anonymous"></script>
+    <script src="textEditor.js"></script>
+    <title>Editor</title>
+</head>
+
+<!--The onload attribute fires when an object has been loaded.-->
+<!-- onload is most often used within the <body> element to execute a script once a web page has completely loaded all content -->
+<body>
+    <div>
+        <!-- The onclick event occurs when the user clicks on an element. -->
+        <button onclick="execCmd('bold');">
+            <i class="fas fa-bold"></i>
+        </button>
+        <button onclick="execCmd('italic');">
+            <i class="fas fa-italic"></i>
+        </button>
+        <button onclick="execCmd('underline');">
+            <i class="fas fa-underline"></i>
+        </button>
+        <button onclick="execCmd('copy');">
+            <i class="fas fa-copy"></i>
+        </button>
+        <button onclick="execCmd('cut');">
+            <i class="fas fa-cut"></i>
+        </button>
+        <button onclick="execCmd('paste');">
+            <i class="fas fa-paste"></i>
+        </button>
+        <select onchange="execCommandWithArg('fontName', this.value);">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Courier">Courier</option>
+        </select>
+        <select onchange="execCommandWithArg('fontSize',this.value);">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select> Highlight <input type="color" onchange="execCommandWithArg('hiliteColor', this.value);">
+        <!-- <button onclick="toggleEditMode();">
+            <i class="fas fa-edit"></i>
+        </button> -->
+    </div>
+
+    <!-- text field -->
+    <iframe name="txt" style="width: 1000px; height: 500px;" "></iframe>
+</body>
+
+</html>
