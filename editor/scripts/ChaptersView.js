@@ -1,3 +1,12 @@
+function downloadHTML(filename, elId, mimeType) {
+    let elHtml = document.getElementById(elId).innerHTML;
+    let link = document.createElement('a');
+    mimeType = mimeType || 'text/plain';
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click();
+}
+
 export default class ChaptersView {
     constructor(root, { onSelect, onAdd, onEdit, onDelete } = {}) {
         // the root is stand for the whole editor
@@ -48,6 +57,9 @@ export default class ChaptersView {
                     </button>
                     <button type="button" class="tool-btn" id="save-btn">
                         <i class="fas fa-save"></i>
+                    </button>
+                    <button type="button" class="tool-btn" id="download-btn">
+                        <i class="fas fa-download"></i>
                     </button>
                     <select class="tool-btn" id="font">
                         <option value="Arial">Arial</option>
@@ -107,6 +119,12 @@ export default class ChaptersView {
             this.onEdit(updatedTitle, updatedBody);
         })
 
+        const downloadBtn = document.querySelector('#download-btn')
+        downloadBtn.addEventListener('click', () => {
+            console.log(document.getElementById("current").innerText)
+            downloadHTML(document.getElementById("current").innerText+'.html', 'body-content','text/html')
+        })
+
         // toolbar functions
         boldBtn.addEventListener('click', () => {
             document.execCommand('bold');
@@ -163,16 +181,7 @@ export default class ChaptersView {
         this.updateChapterPreviewVisibility(false);
     }
 
-    downloadHTML(filename, elId, mimeType) {
-        let elHtml = document.getElementById(elId).innerHTML;
-        alert(elHtml)
-        let link = document.createElement('a');
-        mimeType = mimeType || 'text/plain';
-        link.setAttribute('download', filename);
-        link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
-        alert(link);
-        link.click();
-    }
+    
 
     // render the chapter in the sidebar
     _createListItemHTML(id, title) {
@@ -227,10 +236,12 @@ export default class ChaptersView {
         // update selected chapter
         this.root.querySelectorAll(".chapters_list-item").forEach(chapterListItem => {
             chapterListItem.classList.remove("chapters_list-item-selected");
+            chapterListItem.removeAttribute("id")
         });
 
         // the chapter we choose gonna have bold effect
         this.root.querySelector(`.chapters_list-item[data-chapter-id="${chapter.id}"]`).classList.add("chapters_list-item-selected");
+        this.root.querySelector(`.chapters_list-item[data-chapter-id="${chapter.id}"]`).id = "current"
     }
 
     // hide section when nothing is selected, hide by default

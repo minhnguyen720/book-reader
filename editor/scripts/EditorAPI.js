@@ -28,7 +28,7 @@ export default class EditorAPI {
             // Array push(): push item to the end of the array
             chapters.push(chapterToSave);
         }
-
+        console.log(JSON.stringify(chapters))
         // set a key and a value in the local storage
         localStorage.setItem("editor-chapters", JSON.stringify(chapters));
     }
