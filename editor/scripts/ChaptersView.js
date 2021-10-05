@@ -81,7 +81,7 @@ export default class ChaptersView {
                 </div>
                 <div class="chapters_content">
                     <input type="text" class="chapters_title" placeholder="Enter a title...">
-                    <div class="chapters_body" id="body-content" contenteditable="true" spellcheck="false">
+                    <div class="chapters_body" id="body-content" contenteditable="true" {display: inline-block;} spellcheck="false">
                     </div>
                 </div>
             </div>
