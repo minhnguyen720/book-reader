@@ -1,0 +1,23 @@
+    	//when having request from frontend
+//    	int bookID = request.getParameter("bookID");
+//    	String chapterName = request.getParameter("chapterName");
+//    	String chapterPosition = request.getParameter("chapterPosition");
+//    	chapter.setChapter(bookId,, chapterName, chapterPosition);
+//    	String location = "C:/Users/Admin/eclipse-workspace/ProjectManuel/WebContent" + chapterPosition;
+
+    	
+//    	String location = "C:/Users/Admin/eclipse-workspace/ProjectManuel/WebContent/WEB-INF/3.txt";
+//    
+//    	PrintWriter pw = response.getWriter();
+//    	
+//    	try {
+//    		File file = new File(location);
+//    		FileWriter fstream = new FileWriter(file, false); // false: override the file, true: append the new text to file
+//    		BufferedWriter writer = new BufferedWriter(fstream);
+//    		writer.write(divResponse);
+//    		writer.close();
+//    		pw.println("File created successfully!");
+//    		
+//    	} catch(Exception e) {
+//    		System.out.println(e);
+//    	}
