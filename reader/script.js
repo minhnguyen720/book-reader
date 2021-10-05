@@ -26,26 +26,60 @@ function includeHTML() {
     }
 };
 
+let fontSizePx = 16;
 function changeFontSize(inputScale) {
-    let fontTag = document.querySelectorAll("font, span");
+    /**
+     * if inputScale < 1: scale down, otherwise, it is scale up
+     */
+    if (inputScale < 1)
+        fontSizePx -= 3;
+    else
+        fontSizePx += 3;
+    let fontTag = document.querySelectorAll("font, span, p");
     for (let i = 0; i < fontTag.length; i++) {
         let fontSize = fontTag[i].getAttribute('size')
-        if (fontSize == 0){
-            fontSize = 3
+        if (fontSize != null) {
+            if (fontSize == 0) {
+                fontSize = 3
+            }
+            fontTag[i].setAttribute('size', fontSize * inputScale)
         }
-        fontTag[i].setAttribute('size', fontSize*inputScale)
+        else { // this part is for <p> tag, idea is add 'style' attribute and then modify its properties
+            /**
+             * if there is no attribute style in the tag, create one
+             * else: increase the fontSizePx value in the style attribute
+             */
+            if (fontTag[i].getAttribute('style') == null) {
+                let att = document.createAttribute('style')
+                att.value = "font-size: " + fontSizePx + "px";
+                fontTag[i].setAttributeNode(att);
+            } else {
+                fontTag[i].style.fontSize = fontSizePx + "px";
+            }
+        }
     }
 }
 
 function changeFontType(inputType) {
-    let fontTag = document.querySelectorAll("font");
+    // get font tag
+    let fontTag = document.querySelectorAll("font,p");
+    /** in each fontTag get attribute face
+     * if exist: set attribute face = inputType
+     * if is not exist: create attribute face and set temp value for it
+     * and then set face = inputType
+     */
+    console.log(fontTag)
     for (let i = 0; i < fontTag.length; i++) {
         let fontType = fontTag[i].getAttribute('face')
         if (fontType == null) {
-            let att = document.createAttribute('face')
-            att.value = "something"
-            fontTag[i].setAttributeNode(att);
+            let faceAtt = document.createAttribute('face')
+            let styleAtt = document.createAttribute('style');
+            faceAtt.value = "something"
+            styleAtt.value = "font-family: " + inputType;
+            fontTag[i].setAttributeNode(faceAtt);
+            // console.log(fontTag[i])
         }
         fontTag[i].setAttribute('face', inputType)
+        // console.log(fontTag[i])
     }
 }
