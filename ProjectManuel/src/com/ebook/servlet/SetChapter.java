@@ -17,7 +17,7 @@ public class SetChapter extends HttpServlet {
     protected void doPost(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
     	// get what user type in chapter
-    	String divResponse = request.getParameter("response");
+    	String divResponse = request.getParameter("body-content");
     	String chapterName = request.getParameter("chapterName");
     	int bookID = 1;
     	//int bookID = Integer.parseInt(request.getParameter("bookID"));

@@ -15,7 +15,7 @@ public class ChapterService implements ChapterDAO{
 	//private String getChapterScript = "CALL getChapter(?)";
 	//private String setChapterScript = "CALL setChapter(?, ?)";
 	private String getChapterScript = "SELECT * FROM chapter WHERE ChapterID = ?";
-	private String setChapterScript = "INSERT into chapter(BookID,ChapterName,chapterContent) value (?,?,?)";
+	private String setChapterScript = "INSERT into chapter(BookID,ChapterName,Content) value (?,?,?)";
 	Chapter chapter = new Chapter();
 	
 	@Override

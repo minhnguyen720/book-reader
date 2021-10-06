@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 	static Connection conn = null;
-	static String username="project_java";
-	static String pwd="160817";
+	static String username="root";
+	static String pwd="1234";
 	static String connectionUrl = "jdbc:mysql://localhost:3306/project";
 	
 	public static Connection getConnection() {
