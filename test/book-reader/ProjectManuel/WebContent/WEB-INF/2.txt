@@ -1,0 +1,28 @@
+ 
+       //test without chapterId request from client
+        // We are going to read a file called 1.txt. 
+        // This file is placed under the WEB-INF directory.
+//        String filename = "/WEB-INF/1.html";
+//        System.out.println(filename);
+//      
+//
+//        ServletContext context = getServletContext();
+//
+//        
+//        // thinking about using requestDispatcher 
+//        // First get the file InputStream using ServletContext.getResourceAsStream() method.
+//        InputStream is = context.getResourceAsStream(filename);
+//        System.out.println(is);
+//        
+//        if (is != null) {
+//            InputStreamReader isr = new InputStreamReader(is);
+//            BufferedReader reader = new BufferedReader(isr);
+//            PrintWriter writer = response.getWriter();
+//            String text;
+//
+//            // We read the file line by line and later will be displayed on the browser page.
+//            while ((text = reader.readLine()) != null) {
+//            	System.out.println(text);
+//                writer.println(text);
+//            }
+//        }
