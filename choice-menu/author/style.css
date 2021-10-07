@@ -1,0 +1,131 @@
+.navbar {
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    margin-left: 10px;
+}
+
+.nav-item {
+    margin-left: 40px;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbarSupportedContent {
+    margin-right: 20px;
+}
+
+.body-content {
+    margin-top: 40px;
+}
+
+.welcome-txt {
+    margin-left: 20px;
+}
+
+#welcome {
+    font-size: 50px;
+    color: #A93AFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#books {
+    margin-top: 20px;
+    font-size: 40px;
+    color: #995DF4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar {
+    position: absolute;
+    left: 2%;
+    top: 29%;
+    background: #3D2C8D;
+    border-radius: 40px;
+    height: 60px;
+    transform: translate(0,-50%);
+    padding: 10px;
+}
+
+.search-bar_text {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    padding: 0;
+    transition: .4s;
+    line-height: 40px;
+    width: 0;
+}
+
+.search-bar_btn {
+    background: none;
+    color: #C996CC;
+    float: left;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.search-bar:hover > .search-bar_text {
+    width:240px;
+    padding: 0 6px;
+}
+
+.search-bar:hover > .search-bar_btn {
+    background: #916BBF;
+    color: white;
+}
+
+.create-book {
+    position: absolute;
+    left: 2%;
+    top: 39%;
+    background: #3D2C8D;
+    border-radius: 40px;
+    height: 60px;
+    transform: translate(0,-50%);
+    padding: 10px;
+}
+
+.book-title {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    padding: 0;
+    transition: .4s;
+    line-height: 40px;
+    width: 0;
+}
+
+.create-btn {
+    background: none;
+    color: #C996CC;
+    float: left;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.create-book:hover > .book-title {
+    width:240px;
+    padding: 0 6px;
+}
+
+.create-book:hover > .create-btn {
+    background: #916BBF;
+    color: white;
+}
+
+.functions {
+    margin-top: 30px
+}
