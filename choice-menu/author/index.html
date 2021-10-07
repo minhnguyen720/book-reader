@@ -18,41 +18,73 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand">Libri</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a href="" class="nav-link" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link" aria-current="page">About</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="body-content">
-        <div class="support-content">
-            <h2 class="welcome-txt" id="welcome">Welcome back creator</h2>
-            <h3 class="welcome-txt" id="books">Your books</h3>
-        </div>
-
-        <div class="functions">
-            <div class="search-bar">
-                <input type="text" class="search-bar_text" placeholder="search">
-                <button class="search-bar_btn" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
+    <div class="choose-page">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="#" class="navbar-brand">Libri</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" aria-current="page">About</a>
+                    </li>
+                </ul>
             </div>
-            <div class="create-book">
-                <input type="text" class="book-title" placeholder="title">
-                <button class="create-btn" type="submit">
-                    <i class="fas fa-plus"></i>
-                </button>
+        </nav>
+        <div class="body-content">
+            <div class="support-content">
+                <h2 class="welcome-txt" id="welcome">Welcome back creator</h2>
+                <h3 class="welcome-txt" id="books">Your books</h3>
+            </div>
+    
+            <div class="main-body">
+                <div class="functions">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar_text" placeholder="search">
+                        <button class="search-bar_btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="create-book">
+                        <input type="text" class="book-title" placeholder="title">
+                        <button class="create-btn" type="submit">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>            
+                </div>
+                <div class="book-list">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Book ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">God Father</td>
+                                <td scope="row">0001</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Game of Throne</td>
+                                <td scope="row">0002</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Lord of the Rings</td>
+                                <td scope="row">0003</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Sherlock Holmes</td>
+                                <td scope="row">0004</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

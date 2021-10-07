@@ -1,10 +1,16 @@
+.choosee-page {
+    width: 100%;
+    height: 100%;
+}
+
 .navbar {
     padding: 10px;
 }
 
 .navbar-brand {
     font-family: 'Pacifico', cursive;
-    margin-left: 10px;
+    margin-left: 15px;
+    font-size: 35px !important;
 }
 
 .nav-item {
@@ -21,10 +27,12 @@
 
 .body-content {
     margin-top: 40px;
+    transition: .4s;
 }
 
 .welcome-txt {
     margin-left: 20px;
+    transition: 1s width;
 }
 
 #welcome {
@@ -40,15 +48,31 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.main-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.functions {
+    width: 100%;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 1rem;
+}
+
 .search-bar {
-    position: absolute;
-    left: 2%;
-    top: 29%;
     background: #3D2C8D;
+    width: 60px;
+    transition: .4s;
     border-radius: 40px;
     height: 60px;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     padding: 10px;
+    margin-bottom: 1rem;
 }
 
 .search-bar_text {
@@ -73,24 +97,28 @@
     height: 40px;
 }
 
-.search-bar:hover > .search-bar_text {
-    width:240px;
-    padding: 0 6px;
+.search-bar:hover {
+    width: 320px;
 }
 
-.search-bar:hover > .search-bar_btn {
+.search-bar:hover>.search-bar_text {
+    width: 240px;
+    padding: 0 6px;
+    margin-left: 5px;
+}
+
+.search-bar:hover>.search-bar_btn {
     background: #916BBF;
     color: white;
 }
 
 .create-book {
-    position: absolute;
-    left: 2%;
-    top: 39%;
+    width: 60px;
+    transition: .4s;
     background: #3D2C8D;
     border-radius: 40px;
     height: 60px;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     padding: 10px;
 }
 
@@ -116,16 +144,27 @@
     height: 40px;
 }
 
-.create-book:hover > .book-title {
-    width:240px;
-    padding: 0 6px;
+.create-book:hover {
+    width: 320px;
 }
 
-.create-book:hover > .create-btn {
+.create-book:hover>.book-title {
+    width: 240px;
+    padding: 0 6px;
+    margin-left: 5px;
+}
+
+.create-book:hover>.create-btn {
     background: #916BBF;
     color: white;
 }
 
-.functions {
-    margin-top: 30px
+.book-list {
+    margin: 0 5%;
+    width: 100%;
+}
+
+.table {
+    max-width: 60rem;
+    font-family: 'Montserrat', sans-serif;
 }
