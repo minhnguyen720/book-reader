@@ -1,0 +1,28 @@
+case diagrams
+architecture/component diagrams
+desgin patterns (if use some pattern, write it down to the document)
+presenting (15-20 mins 15%)
+github private repo
+-------------------
+fulfill the requirements = 4.0
+more features = more grades
+--------------------
+KEEP YOUR SHITS SIMPLE
+--------------------
+2 web applications
+- 1 for author to create and edit the book
+- 1 for reader to read and do some shits
+----------------------
+2:30 - 4:00: freely discuss
+Duration: deadline 22/10/2021
+-----------------------
+If you want to use some framework
+- ask yourself why you choose it (if you cant answer it so dont use it)
+Assign tasks for member is really important (remember this)
+------------------------
+Does this project requires user uses specific account to access specific feature (no account for now)
+Does this project need to have security mechanism to protect other book
+Shall we support offline feature (optional)
+Bookmark:
+- where to store the bookmark (link to the device)
+Author should have preview feature

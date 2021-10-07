@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+    </style>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3865c9fb77.js" crossorigin="anonymous"></script>
+    <title>Author choosing site</title>
+</head>
+
+<body>
+    <div class="choose-page">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="/libri/index.html" class="navbar-brand">Libri</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/libri/index.html" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" aria-current="page">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="body-content">
+            <div class="support-content">
+                <h2 class="welcome-txt" id="welcome">Welcome back creator</h2>
+                <h3 class="welcome-txt" id="books">Your books</h3>
+            </div>
+    
+            <div class="main-body">
+                <div class="functions">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar_text" placeholder="search">
+                        <button class="search-bar_btn" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="create-book">
+                        <input type="text" class="book-title" id="title" placeholder="title">
+                        <button class="create-btn" type="button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>            
+                </div>
+                <div class="book-list">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Book ID</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <!--Books rendered here-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/MenuView.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

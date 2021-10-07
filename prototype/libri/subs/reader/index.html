@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Reader</title>
+</head>
+
+<body>
+
+    <div class="reader" id="app">
+        <div class="reader_sidebar">
+            <div class="reader_list">
+                <div class="reader_list-item reader_list-item-selected">
+                    <div class="reader_small-title"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reader_content">
+            <div class="reader_functions">
+                <button class="btn btn-secondary function_item" type="button" onclick="changeFontSize(1.5)">zoom
+                    in</button>
+                <button class="btn btn-secondary function_item" type="button" onclick="changeFontSize(0.75)">zoom
+                    out</button>
+                <div class="dropdown function_item">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        change font
+                    </button>   
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><button class="dropdown-item" type="button"
+                                onclick="changeFontType('Times New Roman')">Times New
+                                Roman</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="changeFontType('Arial')">Arial</button>
+                        </li>
+                        <li><button class="dropdown-item" type="button"
+                                onclick="changeFontType('Tahoma')">Tahoma</button></li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-secondary function_item" onclick="includeHTML()">
+                    Get Document
+                </button>
+
+            </div>
+
+            <div w3-include-html="Chapter 1.html" class="reader_body" id="output" class="container"
+                contenteditable="false" spellcheck="false" height=100% width=98%>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

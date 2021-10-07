@@ -1,0 +1,32 @@
+Go to creator mode
+- go to author choose page
+
+Go to reader mode
+- go to reader choose page
+
+search bar
+- searching base on name
+
+search-btn
+- get the book base on name
+
+create-btn (at author choose page)
+- user get notification 'book detail', user fill book detail as require and hit create btn
+--> go to author-edit page
+
+bookmark-add-btn
+- add a bookmark at the current page
+
+bookmark-remove-btn
+- remove a bookmark at the current page
+
+upload-btn
+- update the text file to database
+
+check-btn (at verify author noti)
+- when author edit existed book --> get verify author notification to get book id
+- send the book id back to server to compare to the appropriate one in database, return
+result to browser 
+
+red-close-btn
+- base on user, go back to the appropriate choose page
