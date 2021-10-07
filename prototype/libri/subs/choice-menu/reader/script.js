@@ -44,7 +44,7 @@ function _searchResult(matchingList) {
 
 function _createBook(title, id) {
     return `
-        <tr onclick="location.href='/libri/subs/reader/index.html';">
+        <tr onclick="location.href='/prototype/libri/subs/reader/index.html';">
             <td scope="row">${title}</td>
             <td scope="row">${id}</td>
         </tr>

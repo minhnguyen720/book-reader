@@ -62,7 +62,7 @@ createBtn.addEventListener('click', () => {
 
 function _createBook(title, id) {
     return `
-        <tr onclick="location.href='/libri/subs/editor/editor.html';">
+        <tr onclick="location.href='/prototype/libri/subs/editor/editor.html';">
             <td scope="row">${title}</td>
             <td scope="row">${id}</td>
         </tr>
