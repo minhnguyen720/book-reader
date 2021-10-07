@@ -4,14 +4,21 @@
 }
 
 .navbar {
-    padding: 10px;
     border-radius: 0 0 30px 30px;
 }
 
 .navbar-brand {
     font-family: 'Pacifico', cursive;
-    margin-left: 15px;
+    margin-left: 45px;
     font-size: 35px !important;
+}
+
+.navbar-toggler {
+    margin-right: 40px;
+}
+
+.navbar-nav {
+    margin-right: 50px;
 }
 
 .nav-item {
