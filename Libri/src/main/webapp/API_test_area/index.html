@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+</head>
+<body>
+    <div id="buttons">
+
+    </div>
+
+    
+    <script>
+        async function getChpaters(BookId) {
+	        const response = await fetch('/Libri/get-book?BookID=' + BookId);
+	        const data = await response.json();
+	        console.log(data);
+            return data;
+	    }
+	    async function getBook() {
+	        const response = await fetch('/Libri/get-all-books?');
+	        const data = await response.text();
+            console.log(data);
+            let array = JSON.parse(data)
+            for (let i = 0; i < array.length; i++) {
+                var button = document.createElement('button');
+                button.type = 'button';
+                button.appendChild(document.createTextNode(array[i].bookName));
+                // button.setAttribute('onClick', getChapter(array[i].bookID));
+                document.getElementById("buttons").appendChild(button);
+            }
+	    }
+	    // async function setBook(BookName) {
+        //     const response = await fetch('/Libri/set-book?BookID=' + BookName, {
+        //         method: POST
+                
+        //     });
+	    //     console.log("complete");
+        // }
+        // async function setChapter(BookName, ChapterName, ChapterContent) {
+        //     const response = await fetch('/Libri/set-book?BookID=' + BookId);
+	    //     const data = await response.json();
+	    //     console.log(data);
+        // }
+	    // let text = [{"bookID":1,"bookName":"The Chicken Soul"}, {"bookID":2,"bookName":"The Duck Soul"}, {"bookID":3,"bookName":"The Dog Soul"}, {"bookID":4,"bookName":"The Cat Soul"}, {"bookID":5,"bookName":"The Bird Soul"}]
+        getBook().catch(error => {
+            console.log(error)
+        })
+
+        // setBook("Catching Catfish").catch(error => {
+        //     console.log(error)
+        // })
+        //add objects to array
+
+        //add buttons for every object in array
+        
+    </script>
+</body>
+</html>
