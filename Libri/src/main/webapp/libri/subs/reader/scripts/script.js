@@ -14,25 +14,7 @@ let font;
 $(function() {
 	const BookID = localStorage.getItem("selectedReadBookID");
 	
-	let notes = document.querySelectorAll('footnote');
-	let noteContents = [];
-
-	for (let i = 0; i < notes.length; i++) {
-		noteContents[i] = notes[i].innerText;
-		notes[i].innerText = "";
-		
-		let footnoteBtn = document.createElement('button');
-		footnoteBtn.textContent = i;
-		footnoteBtn.className = "footnote-btn-class";
-		notes[i].appendChild(footnoteBtn);
-
-		let footnoteBtns = document.querySelectorAll('.footnote-btn-class');
-		for(let i = 0; i < notes.length; i++) {
-			footnoteBtns[i].addEventListener('click', () => {
-				alert(noteContents[i]);
-			})
-		}
-	}
+	renderFootnote()
 	
 	// call api to get all chapters of selected book
 	$.ajax({
@@ -73,6 +55,7 @@ $(function() {
 				localStorage.setItem('recentChapterIdOfBook' + bookID, chapterID);
 				let output = document.getElementById('output');
 				output.innerHTML = content;
+				renderFootnote(); // FIXED: when change chapter the footnotes are not updated.
 				// Load the reader modification to the chapter
 				insertMarkTag();
 				renderBookmarkButton();
@@ -148,6 +131,26 @@ function loadRecentChapter() {
 	loadFontProperty();*/
 }
 
+function renderFootnote() {
+	let notes = document.querySelectorAll('footnote');
+	let noteContents = [];
+	for (let i = 0; i < notes.length; i++) {
+		noteContents[i] = notes[i].innerText;
+		notes[i].innerText = "";
+
+		let footnoteBtn = document.createElement('button');
+		footnoteBtn.textContent = i;
+		footnoteBtn.className = "footnote-btn-class";
+		notes[i].appendChild(footnoteBtn);
+	}
+
+	let footnoteBtns = document.querySelectorAll('.footnote-btn-class');
+	for (let i = 0; i < notes.length; i++) {
+		footnoteBtns[i].addEventListener('click', () => {
+			alert(noteContents[i]);
+		})
+	}
+}
 
 function saveLastLocation() {
 	flag = false;
