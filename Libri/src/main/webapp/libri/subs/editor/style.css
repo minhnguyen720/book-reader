@@ -154,6 +154,7 @@
 .main_content {
     display: flex;
     flex-direction: column-reverse;
+    max-width: 100%;
 }
 
 .chapters_body  {
