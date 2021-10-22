@@ -55,7 +55,6 @@ $(function() {
 				localStorage.setItem('recentChapterIdOfBook' + bookID, chapterID);
 				let output = document.getElementById('output');
 				output.innerHTML = content;
-				renderFootnote(); // FIXED: when change chapter the footnotes are not updated.
 				// Load the reader modification to the chapter
 				insertMarkTag();
 				renderBookmarkButton();
