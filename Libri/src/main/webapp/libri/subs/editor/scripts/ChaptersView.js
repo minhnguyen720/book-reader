@@ -211,16 +211,15 @@ export default class ChaptersView {
 
 		let footnoteBtn = document.querySelector('#footnote-btn');
 
-		footnoteBtn.addEventListener('click', () => {
-			let sel = document.getSelection().toString().trim();
-			if (sel) {
-				this.insertTag(`footnote id=${id}`);
-				id = Math.floor(Math.random() * 1000);
-			} else {
-				alert(`ERROR: Do not select the sentence for footnote.
-    Please set the position (defined by your mouse pointer) for your note`);
-			}
-		})
+        	footnoteBtn.addEventListener('click', () => {
+		    let sel = document.getSelection().toString().trim();
+		    if (sel) {
+			this.insertTag(`footnote id=${id}`);
+			id = Math.floor(Math.random() * 1000);
+		    } else {
+			alert(`ERROR: please select a sentence for the footnote  `)
+		    }
+        	})
 		// ---------------------------------------------------------------------------
 
 	} // end of constructor
@@ -298,9 +297,8 @@ export default class ChaptersView {
 		else if (tag_name.substring(0, 5) === "<span")
 			editor_textarea.setRangeText(`${tag_name}${selection}</span>`);
 		else if (tag_name.substring(0, 8) == "footnote") {
-			let note = prompt("Footnote", "");
-			editor_textarea.setRangeText(`${selection}<${tag_name}>${note}</footnote>`);
-		}
+			editor_textarea.setRangeText(`${selection}<${tag_name}></footnote>`);
+			}
 		else if (tag_name != null)
 			editor_textarea.setRangeText(`<${tag_name}>${selection}</${tag_name}>`);
 	}
